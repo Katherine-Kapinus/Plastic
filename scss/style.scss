@@ -37,12 +37,12 @@
 .icon-arrow-right:before {
 	content: "\ea34";
 }
-.icon-arrow-right2:before {
-    margin-left: -42px;
-	content: "\ea3c";
-    height: 20px;
-    // bottom: 36%;
-    color: #0F0F0F;
+.icon-arrow-right2 {
+    color: #000;
+    font-family: 'icomoon';
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 10px;
 }
 .icon-circle-right:before {
 	content: "\ea42";
@@ -155,7 +155,6 @@ a{
             width: 200px;
             height: 270px;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             animation: floaty 20s ease-in-out infinite;
         }
 
@@ -182,17 +181,20 @@ a{
 		}
 
 		&__button {
+            display: flex;
+            align-items: center;
             font-family: "Instrument Sans",sans-serif;
             font-size: 17px;
-            padding: 23px 52px 23px 32px;
+            padding: 23px 32px 23px 32px;
             border-radius: 100px;
 		    font-weight: 500;
             transition: all 0.1s ease-in-out;
+            transform: scale(1); /* обов'язково */
             &:hover{
                 background-color: #a6a6a6;
             }
             &:active{
-                scale: 0.9;
+                transform: scale(0.9);
             }
         }
 }
