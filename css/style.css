@@ -105,11 +105,11 @@ a, *::before, *::after {
   content: "\ea34";
 }
 
-.icon-arrow-right2:after {
-  padding-left: 12px;
+.icon-arrow-right2:before {
+  margin-left: -42px;
   content: "\ea3c";
-  position: absolute;
-  bottom: 36%;
+  height: 20px;
+  color: #0F0F0F;
 }
 
 .icon-circle-right:before {
@@ -179,7 +179,7 @@ a {
 }
 
 .hero__container {
-  margin: 180px auto 220px auto;
+  margin: 140px auto 220px auto;
 }
 .hero__title {
   font-size: 128px;
@@ -198,6 +198,34 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+.hero__card {
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: floaty 6s ease-in-out infinite;
+}
+@keyframes floaty {
+  0% {
+    transform: translateY(0) rotate(0) skew(0deg, 0deg);
+  }
+  25% {
+    transform: translateY(-20px) rotate(2deg) skew(1deg, 0deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0) skew(0deg, 0deg);
+  }
+  75% {
+    transform: translateY(20px) rotate(-2deg) skew(-1deg, 0deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0) skew(0deg, 0deg);
+  }
+}
 .hero__column {
   grid-column: 2;
   margin-block: 56px;
@@ -210,11 +238,10 @@ a {
   line-height: 1.3;
 }
 .hero__button {
+  font-family: "Instrument Sans", sans-serif;
   font-size: 17px;
-  position: relative;
   padding: 23px 52px 23px 32px;
   border-radius: 100px;
-  font-weight: 500;
   transition: all 0.1s ease-in-out;
 }
 .hero__button:hover {
