@@ -198,3 +198,67 @@ a{
             }
         }
 }
+
+
+//- section cards style
+.cards {
+
+		&__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 160px;
+
+		}
+
+		&__card {
+            position: relative;
+            z-index: 2;
+		}
+
+		&__backgr {
+            width: 100%;
+            border-radius: 20px;
+		}
+
+        &__element{
+
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            
+            &.coin{
+                width: 80%;
+
+            }
+
+            &.phone{
+                width: 30%;
+
+            }
+
+            &.shirt{
+                width: 80%;
+
+            }
+
+            &.globe{
+                width: 21%;
+
+            }
+        }
+
+
+
+        &__text{
+            white-space: nowrap;
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+}
+

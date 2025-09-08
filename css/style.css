@@ -253,3 +253,45 @@ a {
 .hero__button:active {
   transform: scale(0.9);
 }
+
+.cards__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 160px;
+}
+.cards__card {
+  position: relative;
+  z-index: 2;
+}
+.cards__backgr {
+  width: 100%;
+  border-radius: 20px;
+}
+.cards__element {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+.cards__element.coin {
+  width: 80%;
+}
+.cards__element.phone {
+  width: 30%;
+}
+.cards__element.shirt {
+  width: 80%;
+}
+.cards__element.globe {
+  width: 21%;
+}
+.cards__text {
+  white-space: nowrap;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
