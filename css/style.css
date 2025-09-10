@@ -263,6 +263,16 @@ a {
 .cards__card {
   position: relative;
   z-index: 2;
+  overflow: hidden;
+}
+.cards__card:hover .cards__text {
+  transform: translate(-50%, -125%);
+}
+.cards__card:hover .cards__element {
+  transform: translate(-50%, -55%);
+}
+.cards__card:hover .cards__properties {
+  bottom: 3%;
 }
 .cards__backgr {
   width: 100%;
@@ -271,10 +281,10 @@ a {
 .cards__element {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
+  transition: all 0.3s ease-in-out;
 }
 .cards__element.coin {
   width: 80%;
@@ -294,4 +304,20 @@ a {
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
+  transition: all 0.3s ease-in-out;
+}
+.cards__properties {
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  bottom: -5%;
+}
+.cards__property {
+  background-color: #1C1C1C;
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 12px;
 }
