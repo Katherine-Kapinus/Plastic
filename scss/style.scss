@@ -1,4 +1,5 @@
 @import 'nullstyle';
+@import 'story';
 
 
 // -підключення шрифтів
@@ -277,7 +278,6 @@ a{
             transition: all 0.3s ease-in-out;
             position: absolute;
             left: 50%;
-            transform: translateX(-50%);
             display: flex;
             gap: 10px;
             bottom: -5%;

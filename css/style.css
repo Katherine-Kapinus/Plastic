@@ -73,6 +73,85 @@ a, *::before, *::after {
   display: inline-block;
 }
 
+.story__subtitle {
+  text-align: center;
+  margin-bottom: 96px;
+}
+.story__since {
+  font-size: 14px;
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 700;
+  line-height: 13px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.story__we-are {
+  font-size: 18px;
+  font-family: "Instrument Serif", serif;
+  line-height: 16px;
+  letter-spacing: -1px;
+  text-transform: none;
+}
+.story__title {
+  text-align: center;
+  margin-bottom: 130px;
+}
+.story__main-title {
+  font-size: 170px;
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: -4px;
+  text-transform: uppercase;
+  margin-bottom: 96px;
+}
+.story__second-title {
+  font-size: 64px;
+  font-family: "Instrument Serif", serif;
+  line-height: 64px;
+}
+.team {
+  display: flex;
+  justify-content: center;
+}
+.team__person {
+  text-align: center;
+  margin-inline: -20px;
+  position: relative;
+}
+.team__person.person-1 {
+  z-index: 6;
+}
+.team__person.person-2 {
+  z-index: 5;
+}
+.team__person.person-3 {
+  z-index: 4;
+}
+.team__portrait {
+  filter: grayscale(100%);
+}
+.team__info {
+  position: relative;
+  top: -20px;
+  display: inline-block;
+  transform: skewX(15deg) rotate(15deg);
+  transform-origin: left;
+}
+.team__name {
+  font-size: 14px;
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.team__position {
+  font-size: 18px;
+  font-family: "Instrument Serif", serif;
+  letter-spacing: -1px;
+}
+
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon.eot?d6sz2t");
@@ -311,7 +390,6 @@ a {
   transition: all 0.3s ease-in-out;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
   display: flex;
   gap: 10px;
   bottom: -5%;
