@@ -57,6 +57,7 @@
 			text-align: center;
 			margin-inline: -20px;
 			position: relative;
+			transition: all 0.3s ease-in-out;
 			&.person-1{
 				z-index: 6;
 			}
@@ -66,7 +67,9 @@
 			&.person-3{
 				z-index: 4;
 			}
-
+			&:hover{
+				transform: translateY(-40px);
+			}
 		}
 
 		&__portrait {

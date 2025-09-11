@@ -118,6 +118,7 @@ a, *::before, *::after {
   text-align: center;
   margin-inline: -20px;
   position: relative;
+  transition: all 0.3s ease-in-out;
 }
 .team__person.person-1 {
   z-index: 6;
@@ -127,6 +128,9 @@ a, *::before, *::after {
 }
 .team__person.person-3 {
   z-index: 4;
+}
+.team__person:hover {
+  transform: translateY(-40px);
 }
 .team__portrait {
   filter: grayscale(100%);
