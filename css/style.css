@@ -156,6 +156,36 @@ a, *::before, *::after {
   letter-spacing: -1px;
 }
 
+.story__partners {
+  overflow: hidden;
+  width: 100%;
+}
+.story__list {
+  display: flex;
+  flex-wrap: nowrap;
+  -moz-column-gap: 120px;
+       column-gap: 120px;
+  animation: scrollLeft 5s linear infinite;
+}
+.story__partner {
+  flex: 0 0 auto;
+}
+.story__link {
+  font-size: 96px;
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 500;
+  letter-spacing: -2px;
+  white-space: nowrap;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-150%);
+  }
+}
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon.eot?d6sz2t");
