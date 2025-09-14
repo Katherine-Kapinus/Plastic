@@ -238,7 +238,6 @@ section{
 		}
 
         &__element{
-
             position: absolute;
             top: 50%;
             left: 50%;
@@ -283,9 +282,10 @@ section{
             transition: all 0.3s ease-in-out;
             position: absolute;
             left: 50%;
+            transform: translateX(-50%);
             display: flex;
             gap: 10px;
-            bottom: -5%;
+            bottom: -7%;
         }
         
         &__property {
