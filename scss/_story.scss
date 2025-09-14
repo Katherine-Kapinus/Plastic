@@ -103,7 +103,7 @@
 
 
 
-$duration: 5s;
+$duration: 30s;
 .marquee {
 
 		&__partners {
@@ -112,9 +112,12 @@ $duration: 5s;
 		}
 
 		&__list {
+			padding-left: 120px;
 			display: flex;
+			width: max-content;
 			column-gap: 120px;
 			flex-wrap: nowrap;
+			justify-content: flex-start;
 			animation: scrollLeft $duration linear infinite;
 			&:hover{
 				animation-play-state: paused; // зупинка анімації при наведенні
@@ -125,7 +128,7 @@ $duration: 5s;
 			flex: 0 0 auto; // щоб елементи не стискалися
 			transition: all 0.3s ease-in-out;
 			&:hover{
-				scale: 0.8;
+				scale: 1.1;
 				transform-origin: center;
 			}
 		}
@@ -138,6 +141,10 @@ $duration: 5s;
 			font-weight: 500;
 			letter-spacing: -2px;
 			white-space: nowrap;
+			&:hover{
+				color: #ED732E;
+			}
+
 		}
 }
 @keyframes scrollLeft {
@@ -145,6 +152,8 @@ $duration: 5s;
 		transform: translateX(0);
 	}
 	to {
-		transform: translateX(-100%);
+		transform: translateX(-50%);
 	}
 }
+
+

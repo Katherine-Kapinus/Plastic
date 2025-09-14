@@ -161,11 +161,15 @@ a, *::before, *::after {
   width: 100%;
 }
 .marquee__list {
+  padding-left: 120px;
   display: flex;
+  width: -moz-max-content;
+  width: max-content;
   -moz-column-gap: 120px;
        column-gap: 120px;
   flex-wrap: nowrap;
-  animation: scrollLeft 5s linear infinite;
+  justify-content: flex-start;
+  animation: scrollLeft 30s linear infinite;
 }
 .marquee__list:hover {
   animation-play-state: paused;
@@ -175,7 +179,7 @@ a, *::before, *::after {
   transition: all 0.3s ease-in-out;
 }
 .marquee__partner:hover {
-  scale: 0.8;
+  scale: 1.1;
   transform-origin: center;
 }
 .marquee__link {
@@ -188,13 +192,16 @@ a, *::before, *::after {
   letter-spacing: -2px;
   white-space: nowrap;
 }
+.marquee__link:hover {
+  color: #ED732E;
+}
 
 @keyframes scrollLeft {
   from {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 @font-face {
@@ -275,6 +282,10 @@ a {
     max-width: none;
     padding: 0 15px;
   }
+}
+
+section {
+  margin-bottom: 160px;
 }
 
 .navigation {
