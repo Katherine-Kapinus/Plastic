@@ -119,7 +119,7 @@ $duration: 30s;
 			flex-wrap: nowrap;
 			justify-content: flex-start;
 			animation: scrollLeft $duration linear infinite;
-			&:hover{
+			&.paused{
 				animation-play-state: paused; // зупинка анімації при наведенні
 			}
 		}

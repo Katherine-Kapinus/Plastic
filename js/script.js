@@ -14,3 +14,16 @@ setInterval(() => {
     }
     showFrame(currentFrame);
   }, 100); // час між кадрами (100 мс ≈ 10 fps)
+
+// add class paused for marquee on hover
+const elementMarquee = document.querySelectorAll('.marquee__partner');
+const marquee = document.querySelector('.marquee__list');
+
+elementMarquee.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    marquee.classList.add('paused');
+  });
+  item.addEventListener('mouseout', () => {
+    marquee.classList.remove('paused');
+  });
+});

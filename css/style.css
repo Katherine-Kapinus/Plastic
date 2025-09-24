@@ -171,7 +171,7 @@ a, *::before, *::after {
   justify-content: flex-start;
   animation: scrollLeft 30s linear infinite;
 }
-.marquee__list:hover {
+.marquee__list.paused {
   animation-play-state: paused;
 }
 .marquee__partner {
