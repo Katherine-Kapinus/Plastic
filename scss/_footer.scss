@@ -1,3 +1,13 @@
+@keyframes scrollFooter {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-25%);
+	}
+}
+$duration-footer: 10s;
+
 .footer {
 	padding-bottom: 128px;
 
@@ -24,10 +34,13 @@
 			margin-inline: 32px;
 		}
 
+
 		&__marquee {
 			display: flex;
 			max-width: max-content;
 			white-space: nowrap;
+			padding-left: 32px;
+			animation: scrollFooter $duration-footer linear infinite;
 		}
 
 		&__button {
@@ -47,7 +60,11 @@
 				color: #616161;
 				font-weight: 500;
 				font-size: 12px;
-
+				transition: all 0.1s ease-in-out;
+				&:hover{
+					color: #fff;
+					scale: 1.1;
+				}
 			}
 		}
 }

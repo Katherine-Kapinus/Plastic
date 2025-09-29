@@ -73,6 +73,24 @@ a, *::before, *::after {
   display: inline-block;
 }
 
+.button-with-arrow {
+  display: flex;
+  align-items: center;
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 17px;
+  padding: 23px 32px 23px 32px;
+  border-radius: 100px;
+  font-weight: 500;
+  transition: all 0.1s ease-in-out;
+  transform: scale(1); /* обов'язково */
+}
+.button-with-arrow:hover {
+  background-color: #a6a6a6;
+}
+.button-with-arrow:active {
+  transform: scale(0.9);
+}
+
 .story__subtitle {
   text-align: center;
   margin-bottom: 96px;
@@ -193,7 +211,7 @@ a, *::before, *::after {
   white-space: nowrap;
 }
 .marquee__link:hover {
-  color: var(accent-color);
+  color: #ED732E;
 }
 
 @keyframes scrollLeft {
@@ -245,6 +263,14 @@ a, *::before, *::after {
   transform: scale(0.9);
 }
 
+@keyframes scrollFooter {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-25%);
+  }
+}
 .footer {
   padding-bottom: 128px;
 }
@@ -265,6 +291,8 @@ a, *::before, *::after {
   max-width: -moz-max-content;
   max-width: max-content;
   white-space: nowrap;
+  padding-left: 32px;
+  animation: scrollFooter 10s linear infinite;
 }
 .footer__navigation-list {
   display: flex;
@@ -275,6 +303,11 @@ a, *::before, *::after {
   color: #616161;
   font-weight: 500;
   font-size: 12px;
+  transition: all 0.1s ease-in-out;
+}
+.footer__navigation-item a:hover {
+  color: #fff;
+  scale: 1.1;
 }
 
 .marquee-footer__text {
