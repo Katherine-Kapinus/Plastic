@@ -1,6 +1,8 @@
 @import 'nullstyle';
 @import 'story';
 @import 'capabilities';
+@import 'templates';
+@import 'footer';
 
 
 // -підключення шрифтів
@@ -87,10 +89,6 @@ section{
 }
 
 
-.header {
-
-
-}
 .navigation {
     display: flex;
     align-items: center;
@@ -187,21 +185,6 @@ section{
 		}
 
 		&__button {
-            display: flex;
-            align-items: center;
-            font-family: "Instrument Sans",sans-serif;
-            font-size: 17px;
-            padding: 23px 32px 23px 32px;
-            border-radius: 100px;
-		    font-weight: 500;
-            transition: all 0.1s ease-in-out;
-            transform: scale(1); /* обов'язково */
-            &:hover{
-                background-color: #a6a6a6;
-            }
-            &:active{
-                transform: scale(0.9);
-            }
         }
 }
 

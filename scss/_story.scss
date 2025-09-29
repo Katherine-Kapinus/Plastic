@@ -142,7 +142,7 @@ $duration: 30s;
 			letter-spacing: -2px;
 			white-space: nowrap;
 			&:hover{
-				color: #ED732E;
+				color: var(accent-color);
 			}
 
 		}
