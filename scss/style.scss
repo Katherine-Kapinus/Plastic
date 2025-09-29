@@ -1,5 +1,6 @@
 @import 'nullstyle';
 @import 'story';
+@import 'capabilities';
 
 
 // -підключення шрифтів
@@ -88,8 +89,7 @@ section{
 
 .header {
 
-		&__container {
-		}
+
 }
 .navigation {
     display: flex;

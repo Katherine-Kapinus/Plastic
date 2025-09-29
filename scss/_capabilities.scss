@@ -1,0 +1,30 @@
+.capabilities {
+
+      &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      }
+
+      &__column {
+      grid-column: 2;
+      }
+
+      &__title {
+      font-size: 64px;
+      font-family: "Instrument Serif",serif;
+      margin-bottom: 54px;
+      }
+
+      &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px 150px;
+      }
+
+      &__item {
+      font-size: 24px;
+      letter-spacing: -1px;
+      white-space: nowrap;
+      }
+}

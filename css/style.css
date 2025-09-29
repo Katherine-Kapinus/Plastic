@@ -204,6 +204,29 @@ a, *::before, *::after {
     transform: translateX(-50%);
   }
 }
+.capabilities__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.capabilities__column {
+  grid-column: 2;
+}
+.capabilities__title {
+  font-size: 64px;
+  font-family: "Instrument Serif", serif;
+  margin-bottom: 54px;
+}
+.capabilities__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 150px;
+}
+.capabilities__item {
+  font-size: 24px;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon.eot?d6sz2t");
