@@ -15,7 +15,7 @@ $breakpoint-lg: 1280px;
 $breakpoint-xl: 1440px;
 
 .button-with-arrow{
-    display: flex;
+    display: inline-flex; /* замість flex, щоб не тягнулось на весь рядок */
     align-items: center;
     font-family: "Instrument Sans",sans-serif;
     font-size: 17px;
@@ -24,6 +24,8 @@ $breakpoint-xl: 1440px;
     font-weight: 500;
     transition: all 0.1s ease-in-out;
     transform: scale(1); /* обов'язково */
+    color: $color-bg;
+    background-color: $color-text;
     &:hover{
         background-color: $color-hover;
     }
