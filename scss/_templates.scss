@@ -1,5 +1,17 @@
-$color-bg: #f7face85;
+//! COLORS
+$color-bg: #000;
+$color-bg-second: #1C1C1C;
+$color-text: #fff;
+$color-hover: #a6a6a6;
 $accent-color: #ED732E;
+
+
+//! BREAKPOINTS 
+$breakpoint-xs: 480px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1280px;
+$breakpoint-xl: 1440px;
 
 .button-with-arrow{
     display: flex;
@@ -12,7 +24,7 @@ $accent-color: #ED732E;
     transition: all 0.1s ease-in-out;
     transform: scale(1); /* обов'язково */
     &:hover{
-        background-color: #a6a6a6;
+        background-color: $color-hover;
     }
     &:active{
         transform: scale(0.9);

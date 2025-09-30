@@ -20,6 +20,9 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px 150px;
+      @media (max-width: $breakpoint-md) {
+            gap: 20px 50px;
+            }
       }
 
       &__item {

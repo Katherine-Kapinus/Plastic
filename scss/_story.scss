@@ -39,16 +39,21 @@
 			letter-spacing: -4px;
 			text-transform: uppercase;
 			margin-bottom: 96px;
+			@media (max-width: $breakpoint-md) {
+				font-size: 140px;
+			}
 		}
 
 		&__second-title {
 			font-size: 64px;
 			font-family: "Instrument Serif",serif;
 			line-height: 64px;
+			@media (max-width: $breakpoint-md) {
+				font-size: 48px;
+				line-height: 48px;
+			}
 		}
 
-		&__team {
-		}
 }
 .team {
 	display: flex;
@@ -144,6 +149,12 @@ $duration: 30s;
 			white-space: nowrap;
 			&:hover{
 				color: $accent-color;
+			}
+			@media (max-width: $breakpoint-md) {
+				font-size: 80px;
+			}
+			@media (max-width: $breakpoint-sm) {
+				font-size: 64px;
 			}
 
 		}

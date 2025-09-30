@@ -42,7 +42,7 @@
 	content: "\ea34";
 }
 .icon-arrow-right2 {
-    color: #000;
+    color: $color-bg;
     font-family: 'icomoon';
     font-style: normal;
     font-weight: normal;
@@ -58,13 +58,13 @@ html {
 }
 
 body{
-    background: #0F0F0F;
+    background: $color-bg;
     font-family: 'Instrument Sans', sans-serif;
-    color: #fff;
+    color: $color-text;
 }
 
 a{
-    color: #fff;
+    color: $color-text;
 }
 
 [class*= 'container'] {
@@ -72,15 +72,19 @@ a{
     max-width: 1148px;
     margin: 0 auto;
 
-    @media (max-width: 1200.98px) {
-        max-width: 790px;
+    @media (max-width: $breakpoint-lg) {
+        max-width: 960px;
     }
-    @media (max-width: 990.98px) {
-        max-width: 750.98px;
+    @media (max-width: $breakpoint-md) {
+        max-width: 720px;
     }
-    @media (max-width: 767.98px) {
+
+    @media (max-width: $breakpoint-sm) {
         max-width: none;
         padding: 0 15px;
+    }
+    @media (max-width: $breakpoint-xs) {
+        padding: 0 10px;
     }
 }
 
@@ -97,7 +101,7 @@ section{
 		&__bar {
             display: flex;
             justify-content: space-between;
-            background-color: #1C1C1C;
+            background-color: $color-bg-second;
             column-gap: 30px;
             border-radius: 20px;
             padding: 16px 32px;
@@ -113,7 +117,7 @@ section{
             font-weight: 500;
 
             &:hover{
-                color: #a6a6a6;
+                color: $color-hover;
             }
             &:active{
                 scale: 0.9;
@@ -134,7 +138,10 @@ section{
 		&__title {
             user-select: none;
             font-size: 128px;
-            text-align: center;            
+            text-align: center;
+            @media (max-width: $breakpoint-md) {
+                font-size: 96px;
+            }            
 		}
         
 		&__span-italic {
@@ -160,6 +167,16 @@ section{
             height: 270px;
             border-radius: 20px;
             animation: floaty 20s ease-in-out infinite;
+            @media (max-width: $breakpoint-md) {
+                animation: floaty-laptop 14s ease-in-out infinite;
+                width: 150px;
+                height: 200px;
+            }
+            @media (max-width: $breakpoint-sm) {
+                animation: floaty-tablet 14s ease-in-out infinite;
+                width: 150px;
+                height: 200px;
+            }
         }
 
         @keyframes floaty {
@@ -170,6 +187,24 @@ section{
             100% { transform: translateY(-80px) translateX(200px) rotate(5deg) skew(-3deg, -5deg); }
         }
 
+        @keyframes floaty-laptop {
+            0%   { transform: translateY(-100px) translateX(0px) rotate(5deg) skew(-3deg, -5deg); }
+            25%  { transform: translateY(-260px) translateX(400px) rotate(-50deg) skew(10deg, 5deg); }
+            50%  { transform: translateY(20px) translateX(500px) rotate(-20deg) skew(0deg, 5deg); }
+            75%  { transform: translateY(-260px) translateX(10px) rotate(-60deg) skew(5deg, 0deg); }
+            100% { transform: translateY(-100px) translateX(0px) rotate(5deg) skew(-3deg, -5deg); }
+        }
+
+        @keyframes floaty-tablet {
+            0%   { transform: translateY(-100px) translateX(0px) rotate(5deg) skew(-3deg, -5deg); }
+            25%  { transform: translateY(-260px) translateX(400px) rotate(-50deg) skew(10deg, 5deg); }
+            50%  { transform: translateY(20px) translateX(500px) rotate(-20deg) skew(0deg, 5deg); }
+            75%  { transform: translateY(-260px) translateX(10px) rotate(-60deg) skew(5deg, 0deg); }
+            100% { transform: translateY(-100px) translateX(0px) rotate(5deg) skew(-3deg, -5deg); }
+        }
+
+
+        
         &__column{
             grid-column: 2;
             margin-block: 56px;
@@ -272,7 +307,7 @@ section{
         }
         
         &__property {
-            background-color: #1C1C1C;
+            background-color: $color-bg-second;
             border-radius: 100px;
             padding: 6px 16px;
             font-size: 10px;

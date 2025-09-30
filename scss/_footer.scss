@@ -8,12 +8,34 @@
 }
 $duration-footer: 10s;
 
+
 .footer {
 	padding-bottom: 128px;
-
+	position: relative;
+	margin-top: 600px;
+	@media (max-width: $breakpoint-md){
+		margin-top: 400px;
+	}
 
 		&__mailbox {
 			text-align: center;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%) translateY(-65%);
+			z-index: 3;
+			max-width: 700px;
+			width: 100%;
+			& img{
+				width: 100%;
+				height: auto;
+			}
+			@media (max-width: $breakpoint-md) {
+				max-width: 500px;
+				transform: translateX(-50%) translateY(-65%);
+			}
+
+
 		}
 
 		&__marquee-background {
@@ -41,6 +63,9 @@ $duration-footer: 10s;
 			white-space: nowrap;
 			padding-left: 32px;
 			animation: scrollFooter $duration-footer linear infinite;
+			@media (max-width: $breakpoint-md) {
+				animation: scrollFooter $duration-footer*2 linear infinite;
+			}
 		}
 
 		&__button {
@@ -57,12 +82,12 @@ $duration-footer: 10s;
 
 		&__navigation-item {
 			& a{
-				color: #616161;
+				color: $color-hover;
 				font-weight: 500;
 				font-size: 12px;
 				transition: all 0.1s ease-in-out;
 				&:hover{
-					color: #fff;
+					color: $color-text;
 					scale: 1.1;
 				}
 			}
@@ -76,6 +101,9 @@ $duration-footer: 10s;
 			font-family: "Instrument Sans",sans-serif;
 			font-weight: 500;
 			letter-spacing: -3px;
+			@media (max-width: $breakpoint-md) {
+				font-size: 80px;
+			}
 		}
 		
 		&__italic {
