@@ -10,10 +10,14 @@ $duration-footer: 10s;
 
 
 .footer {
+	width: 100%;
+	overflow-x: clip;
+	overflow-y: visible;
+
 	padding-bottom: 128px;
 	position: relative;
 	margin-top: 600px;
-	@media (max-width: $breakpoint-md){
+	@media (max-width: $breakpoint-sm){
 		margin-top: 400px;
 	}
 
@@ -38,10 +42,9 @@ $duration-footer: 10s;
 
 		}
 
-		&__marquee-background {
-		}
 
 		&__body{
+			
 			display: flex;
 			flex-direction: column;
 			align-items: center;

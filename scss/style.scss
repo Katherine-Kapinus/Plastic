@@ -163,20 +163,26 @@ section{
         }
 
         &__card{
-            width: 200px;
-            height: 270px;
+            max-width: 368px;   
+            width: 100%;
             border-radius: 20px;
             animation: floaty 20s ease-in-out infinite;
+            & img{
+                width: 100%;
+                height: auto;
+            }
             @media (max-width: $breakpoint-md) {
                 animation: floaty-laptop 14s ease-in-out infinite;
-                width: 150px;
-                height: 200px;
+                width: 320px;
             }
             @media (max-width: $breakpoint-sm) {
-                animation: floaty-tablet 14s ease-in-out infinite;
-                width: 150px;
-                height: 200px;
+                animation: floaty-tablet 20s ease-in-out infinite;
+                width: 280px;
             }
+            @media (max-width: $breakpoint-xs) {
+                width: 240px;
+            }
+            
         }
 
         @keyframes floaty {
@@ -196,11 +202,11 @@ section{
         }
 
         @keyframes floaty-tablet {
-            0%   { transform: translateY(-100px) translateX(0px) rotate(5deg) skew(-3deg, -5deg); }
-            25%  { transform: translateY(-260px) translateX(400px) rotate(-50deg) skew(10deg, 5deg); }
-            50%  { transform: translateY(20px) translateX(500px) rotate(-20deg) skew(0deg, 5deg); }
-            75%  { transform: translateY(-260px) translateX(10px) rotate(-60deg) skew(5deg, 0deg); }
-            100% { transform: translateY(-100px) translateX(0px) rotate(5deg) skew(-3deg, -5deg); }
+            0%   { transform: translateY(00px) translateX(0px) rotate(5deg) skew(-3deg, -5deg); }
+            25%  { transform: translateY(-320px) translateX(360px) rotate(-50deg) skew(10deg, 5deg); }
+            50%  { transform: translateY(-200px) translateX(460px) rotate(-20deg) skew(0deg, 5deg); }
+            75%  { transform: translateY(-400px) translateX(10px) rotate(-60deg) skew(5deg, 0deg); }
+            100% { transform: translateY(0px) translateX(0px) rotate(5deg) skew(-3deg, -5deg); }
         }
 
 

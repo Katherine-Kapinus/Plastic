@@ -80,13 +80,22 @@
 
 		&__portrait {
 			filter: grayscale(100%);
+			max-width: 240px;
+			width: 100%;
+			& img{
+				width: 100%;
+				height: auto;
+			}
+			@media (max-width: $breakpoint-sm) {
+				max-width: 180px;
+			}
 		}
 
 		&__info {
 			position: relative;
 			top: -20px;
 			display: inline-block;
-			transform: skewX(15deg) rotate(15deg);
+			transform: skewX(15deg) rotate(18deg);
 			transform-origin: left;
 		}
 
@@ -97,13 +106,19 @@
 			letter-spacing: -1px;
 			text-transform: uppercase;
 			margin-bottom: 8px;
-
+			@media (max-width: $breakpoint-sm) {
+				font-size: 12px;
+				
+			}
 		}
 
 		&__position {
 			font-size: 18px;
 			font-family: "Instrument Serif",serif;
 			letter-spacing: -1px;
+			@media (max-width: $breakpoint-sm) {
+				font-size: 16px;
+			}
 		}
 }
 
@@ -112,12 +127,16 @@
 $duration: 30s;
 .marquee {
 
-		&__partners {
-			overflow: hidden;
 			width: 100%;
+			overflow-x: clip;
+			overflow-y: visible;
+		&__partners {
+
 		}
 
 		&__list {
+			
+
 			padding-left: 120px;
 			display: flex;
 			width: max-content;
@@ -127,6 +146,13 @@ $duration: 30s;
 			animation: scrollLeft $duration linear infinite;
 			&.paused{
 				animation-play-state: paused; // зупинка анімації при наведенні
+			}
+			@media (max-width: $breakpoint-md) {
+				column-gap: 100px;
+			}
+			@media (max-width: $breakpoint-sm) {
+				column-gap: 80px;
+				padding-left: 80px;
 			}
 		}
 

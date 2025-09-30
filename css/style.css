@@ -164,12 +164,23 @@ a, *::before, *::after {
 }
 .team__portrait {
   filter: grayscale(100%);
+  max-width: 240px;
+  width: 100%;
+}
+.team__portrait img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .team__portrait {
+    max-width: 180px;
+  }
 }
 .team__info {
   position: relative;
   top: -20px;
   display: inline-block;
-  transform: skewX(15deg) rotate(15deg);
+  transform: skewX(15deg) rotate(18deg);
   transform-origin: left;
 }
 .team__name {
@@ -180,15 +191,26 @@ a, *::before, *::after {
   text-transform: uppercase;
   margin-bottom: 8px;
 }
+@media (max-width: 768px) {
+  .team__name {
+    font-size: 12px;
+  }
+}
 .team__position {
   font-size: 18px;
   font-family: "Instrument Serif", serif;
   letter-spacing: -1px;
 }
+@media (max-width: 768px) {
+  .team__position {
+    font-size: 16px;
+  }
+}
 
-.marquee__partners {
-  overflow: hidden;
+.marquee {
   width: 100%;
+  overflow-x: clip;
+  overflow-y: visible;
 }
 .marquee__list {
   padding-left: 120px;
@@ -203,6 +225,19 @@ a, *::before, *::after {
 }
 .marquee__list.paused {
   animation-play-state: paused;
+}
+@media (max-width: 1024px) {
+  .marquee__list {
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .marquee__list {
+    -moz-column-gap: 80px;
+         column-gap: 80px;
+    padding-left: 80px;
+  }
 }
 .marquee__partner {
   flex: 0 0 auto;
@@ -299,11 +334,14 @@ a, *::before, *::after {
   }
 }
 .footer {
+  width: 100%;
+  overflow-x: clip;
+  overflow-y: visible;
   padding-bottom: 128px;
   position: relative;
   margin-top: 600px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .footer {
     margin-top: 400px;
   }
@@ -529,23 +567,30 @@ section {
   grid-template-columns: 1fr 1fr;
 }
 .hero__card {
-  width: 200px;
-  height: 270px;
+  max-width: 368px;
+  width: 100%;
   border-radius: 20px;
   animation: floaty 20s ease-in-out infinite;
+}
+.hero__card img {
+  width: 100%;
+  height: auto;
 }
 @media (max-width: 1024px) {
   .hero__card {
     animation: floaty-laptop 14s ease-in-out infinite;
-    width: 150px;
-    height: 200px;
+    width: 320px;
   }
 }
 @media (max-width: 768px) {
   .hero__card {
-    animation: floaty-tablet 14s ease-in-out infinite;
-    width: 150px;
-    height: 200px;
+    animation: floaty-tablet 20s ease-in-out infinite;
+    width: 280px;
+  }
+}
+@media (max-width: 480px) {
+  .hero__card {
+    width: 240px;
   }
 }
 @keyframes floaty {
@@ -584,19 +629,19 @@ section {
 }
 @keyframes floaty-tablet {
   0% {
-    transform: translateY(-100px) translateX(0px) rotate(5deg) skew(-3deg, -5deg);
+    transform: translateY(0px) translateX(0px) rotate(5deg) skew(-3deg, -5deg);
   }
   25% {
-    transform: translateY(-260px) translateX(400px) rotate(-50deg) skew(10deg, 5deg);
+    transform: translateY(-320px) translateX(360px) rotate(-50deg) skew(10deg, 5deg);
   }
   50% {
-    transform: translateY(20px) translateX(500px) rotate(-20deg) skew(0deg, 5deg);
+    transform: translateY(-200px) translateX(460px) rotate(-20deg) skew(0deg, 5deg);
   }
   75% {
-    transform: translateY(-260px) translateX(10px) rotate(-60deg) skew(5deg, 0deg);
+    transform: translateY(-400px) translateX(10px) rotate(-60deg) skew(5deg, 0deg);
   }
   100% {
-    transform: translateY(-100px) translateX(0px) rotate(5deg) skew(-3deg, -5deg);
+    transform: translateY(0px) translateX(0px) rotate(5deg) skew(-3deg, -5deg);
   }
 }
 .hero__column {
