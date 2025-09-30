@@ -20,6 +20,11 @@ $duration-footer: 10s;
 	@media (max-width: $breakpoint-sm){
 		margin-top: 400px;
 	}
+	@media (max-width: $breakpoint-xs){
+		margin-top: 300px;
+		padding-bottom: 40px;
+
+	}
 
 		&__mailbox {
 			text-align: center;
@@ -38,13 +43,14 @@ $duration-footer: 10s;
 				max-width: 500px;
 				transform: translateX(-50%) translateY(-65%);
 			}
-
-
+			@media (max-width: $breakpoint-xs) {
+				max-width: 500px;
+				transform: translateX(-50%) translateY(-73%);
+			}
 		}
 
 
 		&__body{
-			
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -57,6 +63,13 @@ $duration-footer: 10s;
 				);
 			border-radius: 32px 32px 0 0 ;
 			margin-inline: 32px;
+			@media (max-width:$breakpoint-sm) {
+				border-radius: 24px 24px 0 0;
+				margin-inline: 12px;
+			}
+			@media (max-width: $breakpoint-xs) {
+				row-gap: 32px;
+			}
 		}
 
 
@@ -69,22 +82,34 @@ $duration-footer: 10s;
 			@media (max-width: $breakpoint-md) {
 				animation: scrollFooter $duration-footer*2 linear infinite;
 			}
+			
+			@media (max-width: $breakpoint-xs) {
+				animation: scrollFooter $duration-footer linear infinite;
+			}
+
+
 		}
 
-		&__button {
-		}
-
-		&__naviagtion {
-
-		}
 		
 		&__navigation-list {
 			display: flex;
 			column-gap: 50px;
+
+			@media (max-width: $breakpoint-sm) {
+				column-gap: 25px;
+				row-gap: 20px;
+				flex-wrap: wrap;
+				justify-content: space-around;
+			}
+			@media (max-width: $breakpoint-xs ) {
+				column-gap: 90px;
+
+			}
 		}
 
 		&__navigation-item {
 			& a{
+				white-space: nowrap;
 				color: $color-hover;
 				font-weight: 500;
 				font-size: 12px;
@@ -104,8 +129,17 @@ $duration-footer: 10s;
 			font-family: "Instrument Sans",sans-serif;
 			font-weight: 500;
 			letter-spacing: -3px;
+
 			@media (max-width: $breakpoint-md) {
 				font-size: 80px;
+			}
+			@media (max-width: $breakpoint-sm) {
+				font-size: 64px;
+			}
+			@media (max-width: $breakpoint-xs) {
+				font-size: 48px;
+				letter-spacing: -1px;
+				
 			}
 		}
 		
